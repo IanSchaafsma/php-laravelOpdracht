@@ -17,22 +17,14 @@
 
       <!-- Navigation -->
       <nav class="space-x-4">
-        <a href="#" class="hover:underline">Home</a>
-        <a href="#" class="hover:underline">About</a>
-        <a href="#" class="hover:underline">Services</a>
-        <a href="#" class="hover:underline">Contact</a>
+        @include("_navigation")
       </nav>
     </div>
   </header>
   <div class="flex items-center justify-center h-screen bg-cover" style="background-image: url(https://img.freepik.com/premium-photo/pastel-cotton-candy-clouds-backgrounds-cotton-candy-clouds-ai-generated_983574-563.jpg);">
         <div class="bg-white p-8 rounded shadow-lg">
-            <h2 class="text-2xl font-semibold mb-4">Welcome bij moffel zijn website!</h2>
-            <p class="text-gray-700 mb-6 text-center">Leer hem hier beter kennen!</p>
-
-            <div class="flex justify-center space-x-4">
-                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Lees meer</a>
-                <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Meet moffel</a>
-            </div>
+            <h2 class="text-2xl font-semibold mb-4">About moffel!</h2>
+            <p class="text-gray-700 mb-6 text-center">Je zal hier meer te weten komen over moffel</p>
         </div>
     </div>
     <footer class="text-center py-4 bg-gray-800 text-white">
