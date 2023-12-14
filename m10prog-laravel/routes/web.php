@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use \App\Http\Controllers\AboutController;
 use \App\Http\Controllers\WelcomeController;
+use \App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 Route::get('/home', [WelcomeController::class, 'index'])->name('home');
-
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/project', [ProjectController::class, 'index'])->name('project');
+Route::get('/project/add', [ ProjectController::class, 'add' ])->name('project.add');
 
 require __DIR__.'/auth.php';
