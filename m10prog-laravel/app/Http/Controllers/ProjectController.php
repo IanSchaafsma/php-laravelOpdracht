@@ -24,6 +24,11 @@ class ProjectController extends Controller
         return view ('project');
     }
 
+    public function show(Project $show): string
+    {
+        return view('project.show', ['project'=>$show]);
+    }
+
 }
 
 
