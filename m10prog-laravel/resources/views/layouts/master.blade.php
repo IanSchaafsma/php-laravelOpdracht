@@ -11,7 +11,7 @@
     </header>
     <main>
         @yield( 'content' )
-        <h1>Ik werk soortvan</h1>
+        <h1>Ik ben de layout</h1>
     </main>
     <footer>
         @include('layouts.partials.footer')
