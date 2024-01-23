@@ -14,9 +14,11 @@
             </div>
         </div>
     </div>
-    <nav>
-    <ul class="flex">
-        <li class="mr-3 px-4 @if(Route::currentRouteName() == 'dashboard') bg-black @else bg-lightblue @endif text-white"><a href="{{ route('url.index') }}">Dashboard</a></li>
-    </ul>
-</nav>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                <a href="{{ route('url.index') }}">Go to Dashboard</a>
+                </div>
+            </div>
+        </div>
 </x-app-layout>
