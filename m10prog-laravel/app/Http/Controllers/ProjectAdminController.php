@@ -29,7 +29,18 @@ class ProjectAdminController extends Controller
      */
     public function store(Request $request)
     {
-        dump( $request->all() );
+        $valid = $request->validate([
+            'titel' => 'required|unique:projects|max:255',
+            'description' => 'required',
+        ]);
+
+        $product = new Project();
+        $product->titel = $valid['titel'];
+        $product->titel = $valid['description'];
+
+        $product->save();
+
+        return redirect(route('url.index'));
     }
 
     /**
