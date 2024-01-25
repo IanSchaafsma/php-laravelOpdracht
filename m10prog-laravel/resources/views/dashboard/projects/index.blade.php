@@ -15,6 +15,11 @@
                 @endforeach
                 {{$projects->links()}}
                 </div>
+                @auth
+                <a href="{{route('url.create')}}" class="bg-green hover:bg-green text-black font-bold py-2 px-4 rounded float-right">
+                {{ __('New project') }}
+                </a>
+                @endauth
             </div>
         </div>
     </div>
