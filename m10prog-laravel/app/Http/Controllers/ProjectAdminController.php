@@ -36,7 +36,7 @@ class ProjectAdminController extends Controller
 
         $product = new Project();
         $product->titel = $valid['titel'];
-        $product->titel = $valid['description'];
+        $product->description = $valid['description'];
 
         $product->save();
 
@@ -56,7 +56,7 @@ class ProjectAdminController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('dashboard.projects.edit', ['projects'=>$project]);
     }
 
     /**
@@ -64,7 +64,15 @@ class ProjectAdminController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $valid = $request->validate([
+            'titel' => 'required|min:3',
+            'description' => 'required|min:10',
+        ]);
+
+        $project->update($valid);
+        $project->save();
+
+        return redirect()->route('projects.index');   
     }
 
     /**
@@ -72,6 +80,7 @@ class ProjectAdminController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('projects.index');   
     }
 }
